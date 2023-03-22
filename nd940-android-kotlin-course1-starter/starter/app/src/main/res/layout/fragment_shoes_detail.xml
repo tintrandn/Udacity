@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shoes_name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/promptShoesName"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <EditText
+            android:id="@+id/promptShoesName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_shoes_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:text="@={viewModel.shoesName}"
+            app:layout_constraintBaseline_toBaselineOf="@id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@id/name" />
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/company"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/promptCompany"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <EditText
+            android:id="@+id/promptCompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_company"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:text="@={viewModel.company}"
+            app:layout_constraintBaseline_toBaselineOf="@id/company"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@id/company" />
+
+        <TextView
+            android:id="@+id/shoesSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/shoes_size"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/promptCompany"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company" />
+
+        <EditText
+            android:id="@+id/promptShoesSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_shoes_size"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:text="@={viewModel.shoesSize}"
+            app:layout_constraintBaseline_toBaselineOf="@id/shoesSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@id/shoesSize" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/description"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/promptDescription"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoesSize" />
+
+        <EditText
+            android:id="@+id/promptDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_description"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:text="@={viewModel.description}"
+            app:layout_constraintBaseline_toBaselineOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@id/description" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toStartOf="@id/saveBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="@id/cancelBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancelBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
