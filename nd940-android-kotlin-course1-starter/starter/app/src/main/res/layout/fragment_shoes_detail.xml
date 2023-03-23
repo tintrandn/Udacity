@@ -9,6 +9,7 @@
             type="com.udacity.shoestore.models.ShoesViewModel" />
     </data>
 
+    <!--        used ConstraintLayout to reduce view hierarchy-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

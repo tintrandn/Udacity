@@ -25,32 +25,34 @@ class ShoesDetailFragment : Fragment() {
         viewModel.resetValue()
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoes_detail, container, false)
-        binding.cancelBtn.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        binding.viewModel = viewModel
+        with(binding) {
+            cancelBtn.setOnClickListener {
+                findNavController().navigateUp()
+            }
 
-        binding.saveBtn.setOnClickListener {
-            if (
-                binding.promptShoesName.text.toString().isEmpty()
-                && binding.promptShoesSize.text.toString().isEmpty()
-                && binding.promptCompany.text.toString().isEmpty()
-                && binding.promptDescription.text.toString().isEmpty()
-            ) {
-                Toast.makeText(
-                    requireContext(),
-                    "Please input all required info",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                viewModel.addShoes()
-                findNavController().navigate(
-                    ShoesDetailFragmentDirections
-                        .actionShoesDetailFragmentToShoesListFragment()
-                )
+            saveBtn.setOnClickListener {
+                if (
+                    binding.promptShoesName.text.toString().isEmpty()
+                    && binding.promptShoesSize.text.toString().isEmpty()
+                    && binding.promptCompany.text.toString().isEmpty()
+                    && binding.promptDescription.text.toString().isEmpty()
+                ) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Please input all required info",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    this.viewModel?.addShoes()
+                    findNavController().navigate(
+                        ShoesDetailFragmentDirections
+                            .actionShoesDetailFragmentToShoesListFragment()
+                    )
+                }
             }
         }
 
-        binding.viewModel = viewModel
         return binding.root
     }
 

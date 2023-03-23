@@ -2,22 +2,27 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--    Simple layout, don't need to used ConstraintLayout here-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--        Add scroll view to scroll if list is to long-->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--            View group add child item, can used recylce view instead-->
             <LinearLayout
                 android:id="@+id/shoesListContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical"
+                android:paddingBottom="16dp" />
 
         </ScrollView>
 
+        <!--        Click this button go to Detail screen-->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addBtn"
             android:layout_width="wrap_content"

@@ -43,7 +43,6 @@ class ShoesListFragment : Fragment() {
                     addView(itemViewBinding.root)
                 }
             }
-
         }
 
         binding.addBtn.setOnClickListener {
