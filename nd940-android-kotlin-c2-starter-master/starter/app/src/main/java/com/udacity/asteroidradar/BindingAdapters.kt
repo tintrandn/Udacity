@@ -6,6 +6,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.BindingAdapter
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.udacity.asteroidradar.domain.Asteroid
@@ -16,8 +17,12 @@ import com.udacity.asteroidradar.main.AsteroidAdapter
 fun bindAsteroidStatusImage(imageView: ImageView, isHazardous: Boolean) {
     if (isHazardous) {
         imageView.setImageResource(R.drawable.ic_status_potentially_hazardous)
+        imageView.contentDescription =
+            imageView.context.getString(R.string.potentially_hazardous_asteroid_image)
     } else {
         imageView.setImageResource(R.drawable.ic_status_normal)
+        imageView.contentDescription =
+            imageView.context.getString(R.string.normal_hazardous_asteroid_image)
     }
 }
 
@@ -56,6 +61,8 @@ fun bindTextViewToDisplayVelocity(textView: TextView, number: Double) {
 fun bindPictureOfDay(imageView: ImageView, pictureOfDay: PictureOfDay?) {
     if (pictureOfDay == null) {
         imageView.setImageResource(R.drawable.ic_connection_error)
+        imageView.contentDescription =
+            imageView.context.getString(R.string.this_is_nasa_s_picture_of_day_showing_nothing_yet)
     } else {
         if (pictureOfDay.mediaType == "image") {
             Picasso.with(imageView.context)
@@ -63,8 +70,14 @@ fun bindPictureOfDay(imageView: ImageView, pictureOfDay: PictureOfDay?) {
                 .placeholder(R.drawable.placeholder_picture_of_day)
                 .error(R.drawable.placeholder_picture_of_day)
                 .into(imageView)
+            imageView.contentDescription = imageView.context.getString(
+                R.string.nasa_picture_of_day_content_description_format,
+                pictureOfDay.title
+            )
         } else {
             imageView.setImageResource(R.drawable.ic_connection_error)
+            imageView.contentDescription =
+                imageView.context.getString(R.string.this_is_nasa_s_picture_of_day_showing_nothing_yet)
             Toast.makeText(imageView.context, "PictureOfDay return video type", Toast.LENGTH_SHORT)
                 .show()
         }

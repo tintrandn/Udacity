@@ -1,6 +1,7 @@
 package com.udacity.asteroidradar.respository
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Transformations
 import com.udacity.asteroidradar.domain.Asteroid
 import com.udacity.asteroidradar.api.*
@@ -10,16 +11,57 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
+
+enum class Filter { WEEK, TODAY, ALL }
+
 class AsteroidRepository(private val asteroidDatabase: AsteroidsDatabase) {
 
-    val asteroids: LiveData<List<Asteroid>> =
+    val asteroids = MediatorLiveData<List<Asteroid>>()
+
+    private var currentFilter = Filter.WEEK
+
+    private val weekAsteroids: LiveData<List<Asteroid>> =
         Transformations.map(
-            asteroidDatabase.asteroidDao.getAsteroidsFromToday(
+            asteroidDatabase.asteroidDao.getAsteroidsForAWeek(
                 getNextSevenDaysFormattedDates()[0]
             )
         ) {
             it.asDomainModel()
         }
+
+    private val todayAsteroid: LiveData<List<Asteroid>> =
+        Transformations.map(
+            asteroidDatabase.asteroidDao.getAsteroidsForToday(
+                getNextSevenDaysFormattedDates()[0]
+            )
+        ) {
+            it.asDomainModel()
+        }
+
+    private val allAsteroid: LiveData<List<Asteroid>> =
+        Transformations.map(
+            asteroidDatabase.asteroidDao.getAllAsteroids()
+        ) {
+            it.asDomainModel()
+        }
+
+    init {
+        asteroids.addSource(weekAsteroids) { result ->
+            if (currentFilter == Filter.WEEK) {
+                result?.let { asteroids.value = it }
+            }
+        }
+        asteroids.addSource(todayAsteroid) { result ->
+            if (currentFilter == Filter.TODAY) {
+                result?.let { asteroids.value = it }
+            }
+        }
+        asteroids.addSource(allAsteroid) { result ->
+            if (currentFilter == Filter.ALL) {
+                result?.let { asteroids.value = it }
+            }
+        }
+    }
 
     suspend fun refreshAsteroids() {
         val days = getNextSevenDaysFormattedDates()
@@ -37,4 +79,10 @@ class AsteroidRepository(private val asteroidDatabase: AsteroidsDatabase) {
             }
         }
     }
+
+    fun updateAsteroids(filter: Filter) = when (filter) {
+        Filter.WEEK -> weekAsteroids.value?.let { asteroids.value = it }
+        Filter.TODAY -> todayAsteroid.value?.let { asteroids.value = it }
+        Filter.ALL -> allAsteroid.value?.let { asteroids.value = it }
+    }.also { currentFilter = filter }
 }

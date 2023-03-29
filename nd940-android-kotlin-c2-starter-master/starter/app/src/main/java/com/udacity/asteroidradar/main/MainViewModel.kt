@@ -7,6 +7,7 @@ import com.udacity.asteroidradar.PictureOfDay
 import com.udacity.asteroidradar.api.NasaApi
 import com.udacity.asteroidradar.database.getDatabase
 import com.udacity.asteroidradar.respository.AsteroidRepository
+import com.udacity.asteroidradar.respository.Filter
 import kotlinx.coroutines.launch
 
 enum class ApiStatus { LOADING, ERROR, DONE }
@@ -69,7 +70,30 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             } catch (e: java.lang.Exception) {
                 _status.value = ApiStatus.ERROR
             }
+        }
+    }
 
+    fun onViewWeekAsteroidsClicked() {
+        viewModelScope.launch {
+            _status.value = ApiStatus.LOADING
+            asteroidRepository.updateAsteroids(Filter.WEEK)
+            _status.value = ApiStatus.DONE
+        }
+    }
+
+    fun onViewTodayAsteroidsClicked() {
+        viewModelScope.launch {
+            _status.value = ApiStatus.LOADING
+            asteroidRepository.updateAsteroids(Filter.TODAY)
+            _status.value = ApiStatus.DONE
+        }
+    }
+
+    fun onViewSavedAsteroidsClicked() {
+        viewModelScope.launch {
+            _status.value = ApiStatus.LOADING
+            asteroidRepository.updateAsteroids(Filter.ALL)
+            _status.value = ApiStatus.DONE
         }
     }
 

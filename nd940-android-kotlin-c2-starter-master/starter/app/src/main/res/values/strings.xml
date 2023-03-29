@@ -21,4 +21,5 @@
     <string name="nasa_picture_of_day_content_description_format">NASA\'s picture of day: %s</string>
     <string name="asteroidStatusIcon">Asteroid Status Icon</string>
     <string name="help_button">Help Button</string>
+    <string name="normal_hazardous_asteroid_image">Normal hazardous asteroid image</string>
 </resources>
