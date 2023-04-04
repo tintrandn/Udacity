@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1500">
+
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@id/ok_btn" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:scaleX="0.75"
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ok_btn"
+                android:alpha="0.75"/>
+
+            <KeyAttribute
+                android:scaleX="0.5"
+                app:framePosition="100"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ok_btn"
+                android:alpha="0.5"/>
+        </KeyFrameSet>
+
+    </Transition>
+
+    <!-- Constraints to apply at the start of the animation -->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/ok_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <!-- Constraints to apply at the end of the animation -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/ok_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </ConstraintSet>
+</MotionScene>
