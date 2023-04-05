@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/motion_detail_screen"
-    app:motionDebug="SHOW_PATH"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:motionDebug="SHOW_PATH"
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
 
@@ -31,10 +31,6 @@
         android:layout_marginStart="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/black"
-        app:layout_constraintBaseline_toBaselineOf="@id/name_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="7"
-        app:layout_constraintStart_toEndOf="@+id/name_title"
         tools:text="@string/label_1" />
 
     <TextView
@@ -50,22 +46,23 @@
         app:layout_constraintTop_toBottomOf="@+id/name_subtitle" />
 
     <TextView
-        android:id="@+id/status_subTitle"
+        android:id="@+id/status_subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/status_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/name_subtitle"
         tools:text="@string/success"
         tools:textColor="@android:color/holo_green_light" />
 
     <Button
         android:id="@+id/ok_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
         android:background="@color/colorAccent"
         android:text="@string/ok"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

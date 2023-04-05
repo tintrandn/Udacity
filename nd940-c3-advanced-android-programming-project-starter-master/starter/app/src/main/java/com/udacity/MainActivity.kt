@@ -1,8 +1,14 @@
 package com.udacity
 
 import android.app.DownloadManager
+import android.app.DownloadManager.STATUS_FAILED
+import android.app.DownloadManager.STATUS_SUCCESSFUL
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
@@ -14,10 +20,8 @@ import com.udacity.utils.cancelNotifications
 import com.udacity.utils.sendNotification
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import kotlin.random.Random
 
-
-class MainActivity : AppCompatActivity(), LoadingButton.OnAnimationListener {
+class MainActivity : AppCompatActivity() {
 
     private var downloadID = 0
     private lateinit var url: String
@@ -29,7 +33,7 @@ class MainActivity : AppCompatActivity(), LoadingButton.OnAnimationListener {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-//        registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+        registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
 
         createChannel(getString(R.string.notification_channel_name))
 
@@ -56,25 +60,41 @@ class MainActivity : AppCompatActivity(), LoadingButton.OnAnimationListener {
             download()
         }
 
-        loading_button.setOnAnimationListener(this)
     }
 
-    override fun onFinish() {
-        loading_button.buttonState = ButtonState.Completed
-        notificationManager = getSystemService(NotificationManager::class.java)
-        notificationManager.cancelNotifications()
-        notificationManager.sendNotification(
-            getMessageBody(),
-            applicationContext,
-            downloadID,
-            Random.nextBoolean()
-        )
-    }
+    private val receiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            val id = intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1)
+            val downloadManager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+            val query = DownloadManager.Query()
+            var isSuccess = false
+            query.setFilterById(id!!)
+            query.setFilterByStatus(
+                STATUS_FAILED or STATUS_SUCCESSFUL
+            )
+            val cursor = downloadManager.query(query)
+            if (cursor.moveToFirst()) {
+                when (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS))) {
+                    STATUS_SUCCESSFUL -> {
+                        isSuccess = true
+                    }
+                    STATUS_FAILED -> {
+                        isSuccess = false
+                    }
+                }
+            }
 
-//    private val receiver = object : BroadcastReceiver() {
-//        override fun onReceive(context: Context?, intent: Intent?) {
-//        }
-//    }
+            loading_button.buttonState = ButtonState.Completed
+            notificationManager = getSystemService(NotificationManager::class.java)
+            notificationManager.cancelNotifications()
+            notificationManager.sendNotification(
+                getMessageBody(),
+                applicationContext,
+                downloadID,
+                isSuccess
+            )
+        }
+    }
 
     private fun createChannel(channelName: String) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

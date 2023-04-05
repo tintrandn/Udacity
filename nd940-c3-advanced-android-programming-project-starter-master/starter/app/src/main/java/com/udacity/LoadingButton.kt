@@ -36,8 +36,6 @@ class LoadingButton @JvmOverloads constructor(
 
     private val valueAnimator = ValueAnimator.ofFloat(0f, 360f)
 
-    private lateinit var onAnimationListener: OnAnimationListener
-
     var buttonState: ButtonState by Delegates.observable<ButtonState>(ButtonState.Completed) { _, _, buttonState ->
         when (buttonState) {
             ButtonState.Completed -> {
@@ -66,9 +64,6 @@ class LoadingButton @JvmOverloads constructor(
         updateTextPaint(false)
     }
 
-    fun setOnAnimationListener (onAnimationListener: OnAnimationListener) {
-        this.onAnimationListener = onAnimationListener
-    }
     private fun initAttributeSet(attrs: AttributeSet) {
         val typeArray =
             context.obtainStyledAttributes(attrs, R.styleable.LoadingButton, 0, 0)
@@ -99,13 +94,10 @@ class LoadingButton @JvmOverloads constructor(
             addUpdateListener {
                 mProgress = it.animatedValue as Float
                 invalidate()
-                // Mock download completed
-                if (mProgress == 360f) {
-                    onAnimationListener.onFinish()
-                }
             }
             interpolator = LinearInterpolator()
             duration = 2000
+            repeatCount = ValueAnimator.INFINITE
         }
     }
 
@@ -181,7 +173,4 @@ class LoadingButton @JvmOverloads constructor(
         setMeasuredDimension(w, h)
     }
 
-    interface OnAnimationListener {
-        fun onFinish()
-    }
 }

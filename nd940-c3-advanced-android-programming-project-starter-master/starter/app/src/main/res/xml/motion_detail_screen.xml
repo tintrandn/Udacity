@@ -2,29 +2,25 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Transition
+        app:autoTransition="animateToEnd"
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/start"
-        app:duration="1500">
-
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@id/ok_btn" />
+        app:duration="2000">
 
         <KeyFrameSet>
+            <KeyFrameSet>
+                <KeyAttribute
+                    android:alpha="0.75"
+                    app:framePosition="50"
+                    app:motionTarget="@id/name_subtitle" />
+            </KeyFrameSet>
 
-            <KeyAttribute
-                android:scaleX="0.75"
-                app:framePosition="50"
-                app:keyPositionType="parentRelative"
-                app:motionTarget="@id/ok_btn"
-                android:alpha="0.75"/>
-
-            <KeyAttribute
-                android:scaleX="0.5"
-                app:framePosition="100"
-                app:keyPositionType="parentRelative"
-                app:motionTarget="@id/ok_btn"
-                android:alpha="0.5"/>
+            <KeyFrameSet>
+                <KeyAttribute
+                    android:alpha="0.75"
+                    app:framePosition="50"
+                    app:motionTarget="@id/status_subtitle" />
+            </KeyFrameSet>
         </KeyFrameSet>
 
     </Transition>
@@ -33,27 +29,47 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
-            android:id="@id/ok_btn"
+            android:id="@id/name_subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/fab_margin"
-            android:layout_marginEnd="@dimen/fab_margin"
-            android:layout_marginBottom="@dimen/fab_margin"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.0"
+            app:layout_constraintBaseline_toBaselineOf="@id/name_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/name_title" />
+
+        <Constraint
+            android:id="@id/status_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            app:layout_constraintBaseline_toBaselineOf="@id/status_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/name_subtitle" />
 
     </ConstraintSet>
 
     <!-- Constraints to apply at the end of the animation -->
     <ConstraintSet android:id="@+id/end">
+
         <Constraint
-            android:id="@id/ok_btn"
+            android:id="@id/name_subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:alpha="1.0"
+            app:layout_constraintBaseline_toBaselineOf="@id/name_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/name_title" />
+
+        <Constraint
+            android:id="@id/status_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1.0"
+            app:layout_constraintBaseline_toBaselineOf="@id/status_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/name_subtitle" />
 
     </ConstraintSet>
 </MotionScene>

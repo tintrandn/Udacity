@@ -29,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         val isSuccess = intent.getBooleanExtra(DETAIL_ACTIVITY_INTENT_IS_SUCCESS_KEY, false)
-        status_subTitle.apply {
+        status_subtitle.apply {
             if (isSuccess) {
                 text = getString(R.string.success)
                 setTextColor(resources.getColor(android.R.color.holo_green_light, null))
@@ -39,21 +39,9 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
-        motion_layout.addTransitionListener(object : TransitionListener {
-            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
-            }
-
-            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
-            }
-
-            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                finish()
-            }
-
-            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
-            }
-
-        })
+        ok_btn.setOnClickListener {
+            finish()
+        }
     }
 
     companion object {
