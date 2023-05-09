@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e63f676-8007-415a-afc0-815307156057" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/.github/workflows/manual.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/CODEOWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/androidTestResultsUserPreferences.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/androidTest/java/com/udacity/project4/RemindersActivityTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/androidTest/java/com/udacity/project4/locationreminders/data/local/RemindersDaoTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/androidTest/java/com/udacity/project4/locationreminders/data/local/RemindersLocalRepositoryTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/androidTest/java/com/udacity/project4/locationreminders/reminderslist/ReminderListFragmentTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/androidTest/java/com/udacity/project4/util/DataBindingIdlingResource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/MyApp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/authentication/AuthenticationActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/base/BaseFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/base/BaseRecyclerViewAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/base/BaseViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/base/DataBindingViewHolder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/base/NavigationCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/ReminderDescriptionActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/RemindersActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/ReminderDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/dto/ReminderDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/dto/Result.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/local/LocalDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/local/RemindersDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/local/RemindersDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/data/local/RemindersLocalRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/geofence/GeofenceBroadcastReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/geofence/GeofenceTransitionsJobIntentService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/geofence/GeofenceUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/reminderslist/ReminderDataItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/reminderslist/ReminderListFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/reminderslist/RemindersListAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/reminderslist/RemindersListViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/savereminder/SaveReminderFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/savereminder/SaveReminderViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/locationreminders/savereminder/selectreminderlocation/SelectLocationFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/utils/BindingAdapters.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/utils/Extensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/utils/NotificationUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/java/com/udacity/project4/utils/SingleLiveEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/ic_location.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/ic_no_data.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/ic_save.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/drawable/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/activity_authentication.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/activity_reminder_description.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/activity_reminders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/fragment_reminders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/fragment_save_reminder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/fragment_select_location.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/layout/it_reminder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/menu/map_options.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/raw/map_style.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/release/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/test/java/com/udacity/project4/locationreminders/LiveDataTestUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/test/java/com/udacity/project4/locationreminders/data/FakeDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/test/java/com/udacity/project4/locationreminders/reminderslist/RemindersListViewModelTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/test/java/com/udacity/project4/locationreminders/rule/MainCoroutineRule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/app/src/test/java/com/udacity/project4/locationreminders/savereminder/SaveReminderViewModelTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nd940-android-kotlin-c4-starter/starter/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PExaZ944akhntj63tQpnvAm3om" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tintran/AndroidStudioProjects/udacity/nd940-c3-advanced-android-programming-project-starter-master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e63f676-8007-415a-afc0-815307156057" name="Changes" comment="" />
+      <created>1683036106074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683036106074</updated>
+    </task>
+    <servers />
+  </component>
+</project>

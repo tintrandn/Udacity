@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+    <string name="ballot_logo">Ballot logo image</string>
+    <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="representatives">Find My Representatives</string>
+    <string name="upcoming_elections_header">UPCOMING ELECTIONS</string>
+    <string name="saved_elections_header">SAVED ELECTIONS</string>
+    <string name="election_information">ELECTION INFORMATION</string>
+    <string name="voting_locations"><u>Voting Locations</u></string>
+    <string name="ballot_information"><u>Ballot Information</u></string>
+    <string name="state_correspondence">STATE CORRESPONDENCE</string>
+    <string name="follow_election">Follow Election</string>
+    <string name="unfollow_election">Unfollow Election</string>
+    <string name="representative_search">REPRESENTATIVE SEARCH</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="find_my_representatives">Find My Representatives</string>
+    <string name="use_my_location">Use my location</string>
+    <string name="my_representatives">MY REPRESENTATIVES</string>
+    <string name="representative_photo">Representative Photo</string>
+    <string name="facebook_icon">Facebook Icon</string>
+    <string name="twitter_icon">Twitter Icon</string>
+    <string name="web_icon">Web Icon</string>
+
+</resources>
